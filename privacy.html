@@ -55,26 +55,33 @@
         <p>FormCopy Pro is a Google Sheets add-on that automatically copies formulas from row 2 into every new form response row. It helps users maintain calculated fields, lookups, and other formulas across all response rows without manual effort.</p>
 
         <h2>Data We Access</h2>
-        <p>FormCopy Pro requests the following permissions to function:</p>
+        <p>FormCopy Pro accesses the following specific types of Google user data:</p>
         <ul>
-            <li><strong>Spreadsheet data</strong> (<code>spreadsheets</code>) &mdash; We read formulas and number formats from row 2 of the linked response sheet and write those formulas into new response rows. We do not access any other spreadsheets in your Google Drive.</li>
-            <li><strong>External requests</strong> (<code>script.external_request</code>) &mdash; Used for license validation only.</li>
-            <li><strong>User email</strong> (<code>userinfo.email</code>) &mdash; We access your email address to identify your account for license and usage tracking.</li>
+            <li><strong>Google Sheets spreadsheet data</strong> (<code>spreadsheets.currentonly</code>) &mdash; We read formulas and number formats from row 2 of the active response sheet and write those formulas into new response rows. Access is limited to the specific spreadsheet where the add-on is installed.</li>
+            <li><strong>Google Drive files</strong> (<code>drive.file</code>) &mdash; Used only to access files that the user explicitly opens with the add-on.</li>
+            <li><strong>Script triggers</strong> (<code>script.scriptapp</code>) &mdash; Used to create form-submit triggers that automatically copy formulas when new responses arrive.</li>
             <li><strong>Container UI</strong> (<code>script.container.ui</code>) &mdash; Used to display the add-on sidebar and configuration dialogs within Google Sheets.</li>
         </ul>
 
-        <h2>Data We Collect</h2>
-        <p><strong>None.</strong> All data stays in your Google Sheets. FormCopy Pro does not collect, store, or transmit any spreadsheet data, form responses, or personal information to external servers.</p>
-
-        <h2>Data Storage</h2>
-        <p>All user settings (such as feature preferences and usage counters) are stored exclusively in Google Apps Script's Properties Service. This data resides within Google's infrastructure, tied to your Google account.</p>
-        <p><strong>We do not operate any external servers or databases.</strong> No spreadsheet data or user information is ever transmitted to or stored on third-party servers.</p>
+        <h2>How We Use Your Data</h2>
+        <p>FormCopy Pro uses Google user data exclusively to provide its core functionality: copying formulas from row 2 into new form response rows. Specifically:</p>
+        <ul>
+            <li>We read formulas and number formats from row 2 of your response sheet.</li>
+            <li>We write adjusted formulas into each new response row when a form submission arrives.</li>
+            <li>We do <strong>not</strong> use your data for advertising, analytics, market research, or any purpose other than the add-on's stated functionality.</li>
+            <li>We do <strong>not</strong> use your data to train AI or machine learning models.</li>
+        </ul>
 
         <h2>Data Sharing</h2>
-        <p>We do <strong>not</strong> share, sell, rent, or disclose any user data to third parties. Your spreadsheet data and personal information remain within the Google ecosystem at all times.</p>
+        <p>We do <strong>not</strong> share, sell, rent, or disclose any Google user data to any third parties. Your spreadsheet data and personal information remain within the Google ecosystem at all times. No data is transmitted to external servers.</p>
 
-        <h2>Data Retention</h2>
-        <p>Settings are retained in Google Properties Service for as long as the add-on is installed. Uninstalling the add-on removes all stored settings. We do not retain any data after uninstallation.</p>
+        <h2>Data Storage &amp; Protection</h2>
+        <p>All user settings (such as feature preferences and usage counters) are stored exclusively in Google Apps Script's Properties Service, which resides within Google's infrastructure and is tied to your Google account. We inherit Google's security infrastructure for all data protection.</p>
+        <p><strong>We do not operate any external servers or databases.</strong> No spreadsheet data or user information is ever transmitted to or stored on third-party servers.</p>
+
+        <h2>Data Retention &amp; Deletion</h2>
+        <p>Settings are retained in Google Properties Service for as long as the add-on is installed. To delete all stored data, simply uninstall the add-on from your Google Sheets spreadsheet. Uninstalling removes all stored settings and preferences. We do not retain any data after uninstallation.</p>
+        <p>You may also contact us at <a href="mailto:lidaban2025@gmail.com">lidaban2025@gmail.com</a> to request deletion of any data associated with your account.</p>
 
         <h2>Security</h2>
         <p>FormCopy Pro runs entirely within Google's Apps Script platform, inheriting Google's security infrastructure. We do not handle authentication or store credentials independently.</p>
